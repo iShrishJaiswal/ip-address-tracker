@@ -31,18 +31,34 @@ a {
 
 body {
     background: url('/images/pattern-bg.png') no-repeat;
+    background-size: cover;
     height: 250px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 400;
+    padding: 20px 0;
 }
 
 .input {
     border-radius: 10px;
     display: flex;
     flex-direction: row;
-    /* justify-content: center; */
-    /* align-items: center; */
+    width: 90%;
+    /* justify-self: center; */
 }
 button{
-    /* display: inline-block; */
+    cursor: pointer;
 }
 .arrow-div{
     /* display: inline-flex; */
@@ -51,27 +67,58 @@ button{
     background: black;
     height: 4rem;
     width: 20%;
-    border-radius: 0 10px 10px 0;
+    border-radius: 0 15px 15px 0;
+    border: none;
 }
 
 input {
     width: 80%;
     height: 4rem;
-    border-radius: 10px 0 0 10px;   
+    border-radius: 15px 0 0 15px;   
     border: none;
+    padding: 20px;
+    font-size: 1.3rem;
+    font-weight: 500;
+    /* cursor: none; */
 }
+
+input:focus{
+        outline: none;
+    }
 
 .details {
     background: white;
-    display: flex;
-    justify-content: center;
     border-radius: 10px;
-    width: 21rem;
+    width: 80%;
     padding: 1.5rem;
     text-align: center;
     margin: 1.5rem auto 0;
+    cursor: default;
+}
+
+.details ul {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
 }
 
 li {
     padding: 0.5rem 0;
+}
+.bold {
+    display: inline-block;
+    font-weight: 500;
+    padding-top: 0.5em;
+    font-size: 1.2rem;
+}
+
+@media (min-width: 960px) {
+    .details ul {
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .input {
+        width: 80%;
+    }
 }

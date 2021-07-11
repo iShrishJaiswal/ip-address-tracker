@@ -10,7 +10,7 @@ const api_url = 'https://geo.ipify.org/api/v1';
 let ip = '192.212.174.101';
 const map = L.map('mapid');
 
-map.setView([34.04915, -118.09462], 13);
+map.setView([34.04915, -118.09462], 20);
 
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -52,7 +52,7 @@ form.addEventListener('submit', async (e) => {
     dispLocation.innerText = `${rloc.city}, ${rloc.region} ${rloc.postalCode}`;
     dispTimeZone.innerText = rloc.timezone;
     dispIsp.innerText = resp.isp;
-    map.setView([rloc.lat, rloc.lng], 13);
+    map.setView([rloc.lat, rloc.lng], 20);
     L.marker([rloc.lat, rloc.lng]).addTo(map)
         .openPopup();
 })
