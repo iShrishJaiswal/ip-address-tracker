@@ -21,8 +21,8 @@
   <div class="container">
     <main>
       <h1>IP Address Tracker</h1>
-      <form action="" class=".input">
-        <input type="text" placeholder="Search for any IP address or domain">
+      <form action="" class="input">
+        <input type="text" class="input-text" placeholder="Search for any IP address or domain">
         <button class="arrow-div">
           <svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="11" height="14">
             <path fill="" stroke="#FFF" stroke-width="3" d="M2 1l6 6-6 6" />
@@ -31,16 +31,16 @@
       </form>
       <div class="details">
         <ul>
-          <li><span>IP Address</span><br><span>192.212.174.101</span></li>
-          <li><span>Location</span><br><span>Brooklyn, NY 10001</span></li>
-          <li><span>Timezone</span><br><span>UTC</span></li>
-          <li><span>ISP</span><br><span>SpaceX Starlink</span></li>
+          <li><span>IP Address</span><br><span class="disp-ip">192.212.174.101</span></li>
+          <li><span>Location</span><br><span class="disp-loc">Brooklyn, NY 10001</span></li>
+          <li><span>Timezone</span><br><span class="disp-time">UTC</span></li>
+          <li><span>ISP</span><br><span class="disp-isp">SpaceX Starlink</span></li>
         </ul>
       </div>
     </main>
     <div id="mapid"></div>
   </div>
-  
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
     integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
     crossorigin=""></script>
